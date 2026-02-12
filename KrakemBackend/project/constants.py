@@ -30,3 +30,4 @@ class ResourceTypeConstants(BaseIntConstants):
     TEXT: int = 1
     PDF: int = 2
     WORD: int = 3
+

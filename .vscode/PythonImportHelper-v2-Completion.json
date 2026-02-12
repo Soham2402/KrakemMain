@@ -60,6 +60,15 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -81,6 +90,30 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "importPath": "project.views",
+        "description": "project.views",
+        "isExtraImport": true,
+        "detail": "project.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
         "documentation": {}
     },
     {
@@ -207,6 +240,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -215,11 +256,91 @@
         "documentation": {}
     },
     {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "importPath": "project.models",
+        "description": "project.models",
+        "isExtraImport": true,
+        "detail": "project.models",
+        "documentation": {}
+    },
+    {
+        "label": "RequestSchema",
+        "importPath": "KrakemBackend.utils",
+        "description": "KrakemBackend.utils",
+        "isExtraImport": true,
+        "detail": "KrakemBackend.utils",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "CreateProjectSchema",
+        "importPath": "project.utils",
+        "description": "project.utils",
+        "isExtraImport": true,
+        "detail": "project.utils",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "JWTAuthentication",
+        "importPath": "rest_framework_simplejwt.authentication",
+        "description": "rest_framework_simplejwt.authentication",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.authentication",
+        "documentation": {}
+    },
+    {
         "label": "bin_dir",
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -228,7 +349,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -237,7 +358,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -246,7 +367,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -255,7 +376,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"krakem-main\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -264,7 +385,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -318,7 +439,7 @@
         "kind": 5,
         "importPath": "KrakemBackend.KrakemBackend.settings",
         "description": "KrakemBackend.KrakemBackend.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-%pou(*$80ver^hdy_f7*pxdq16e^7gd4$g&36^h*p$6l=usl#)'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-%pou(*$80ver^hdy_f7*pxdq16e^7gd4$g&36^h*p$6l=usl#)'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "KrakemBackend.KrakemBackend.settings",
         "documentation": {}
     },
@@ -327,7 +448,7 @@
         "kind": 5,
         "importPath": "KrakemBackend.KrakemBackend.settings",
         "description": "KrakemBackend.KrakemBackend.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "KrakemBackend.KrakemBackend.settings",
         "documentation": {}
     },
@@ -336,7 +457,7 @@
         "kind": 5,
         "importPath": "KrakemBackend.KrakemBackend.settings",
         "description": "KrakemBackend.KrakemBackend.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'project',",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "KrakemBackend.KrakemBackend.settings",
         "documentation": {}
     },
@@ -345,7 +466,7 @@
         "kind": 5,
         "importPath": "KrakemBackend.KrakemBackend.settings",
         "description": "KrakemBackend.KrakemBackend.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'project',\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    'rest_framework',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'django_extensions',\n    'project',",
         "detail": "KrakemBackend.KrakemBackend.settings",
         "documentation": {}
     },
@@ -373,6 +494,24 @@
         "importPath": "KrakemBackend.KrakemBackend.settings",
         "description": "KrakemBackend.KrakemBackend.settings",
         "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
+        "detail": "KrakemBackend.KrakemBackend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "KrakemBackend.KrakemBackend.settings",
+        "description": "KrakemBackend.KrakemBackend.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': (\n        'rest_framework.permissions.IsAuthenticated',\n    ),\n}\nSIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": datetime.timedelta(minutes=60),",
+        "detail": "KrakemBackend.KrakemBackend.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "KrakemBackend.KrakemBackend.settings",
+        "description": "KrakemBackend.KrakemBackend.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    \"ACCESS_TOKEN_LIFETIME\": datetime.timedelta(minutes=60),\n    \"REFRESH_TOKEN_LIFETIME\": datetime.timedelta(days=1),\n    \"AUTH_HEADER_TYPES\": (\"Bearer\",),\n}\nWSGI_APPLICATION = 'KrakemBackend.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/6.0/ref/settings/#databases\nDATABASES = {\n    'default': {",
         "detail": "KrakemBackend.KrakemBackend.settings",
         "documentation": {}
     },
@@ -453,8 +592,17 @@
         "kind": 5,
         "importPath": "KrakemBackend.KrakemBackend.urls",
         "description": "KrakemBackend.KrakemBackend.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path(\"test/\", Project.as_view())\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/user/login', TokenObtainPairView.as_view()),\n    path('api/user/refresh/', TokenRefreshView.as_view()),\n    path(\"test/\", Project.as_view())\n]",
         "detail": "KrakemBackend.KrakemBackend.urls",
+        "documentation": {}
+    },
+    {
+        "label": "RequestSchema",
+        "kind": 6,
+        "importPath": "KrakemBackend.KrakemBackend.utils",
+        "description": "KrakemBackend.KrakemBackend.utils",
+        "peekOfCode": "class RequestSchema:\n    required_fields: set[str] = set()\n    optional_fields: set[str] = set()\n    @classmethod\n    def validate(cls, payload: dict):\n        missing = cls.required_fields - payload.keys()\n        if missing:\n            raise ValueError(f\"Missing fields: {missing}\")",
+        "detail": "KrakemBackend.KrakemBackend.utils",
         "documentation": {}
     },
     {
@@ -545,6 +693,24 @@
         "description": "KrakemBackend.project.models",
         "peekOfCode": "class ResourceChunks(models.Model):\n    vector_id = models.CharField(null=False, max_length=255)\n    url = models.URLField(null=False,)\n    resource = models.ForeignKey(to=Resource, null=False, on_delete=models.CASCADE)\n    vectorising_state = models.IntegerField(choices=ProcessingConstants.model_choices,\n                                            default=ProcessingConstants.PENDING)\n    created_on = models.DateField(auto_now=True)\n    completed_on = models.DateField()\n    class Meta:\n        db_table = \"resource_chunk\"",
         "detail": "KrakemBackend.project.models",
+        "documentation": {}
+    },
+    {
+        "label": "CreateProjectSchema",
+        "kind": 6,
+        "importPath": "KrakemBackend.project.utils",
+        "description": "KrakemBackend.project.utils",
+        "peekOfCode": "class CreateProjectSchema(RequestSchema):\n    required_fields: set[str] = {\"name\", \"description\"}\n    @classmethod\n    def create(cls, request) -> str:\n        data: Dict = request.data\n        user: User = request.user\n        project = Project.objects.create(name=data[\"name\"], owner=user,\n                                         description=data[\"description\"])\n        return str(project.project_id)",
+        "detail": "KrakemBackend.project.utils",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "kind": 6,
+        "importPath": "KrakemBackend.project.views",
+        "description": "KrakemBackend.project.views",
+        "peekOfCode": "class Project(APIView):\n    authentication_classes = [JWTAuthentication]\n    permission_classes = [IsAuthenticated]\n    def post(self, request) -> Response:\n        try:\n            data: Dict = request.data\n            CreateProjectSchema.validate(payload=data)\n            project_id: str = CreateProjectSchema.create(request=request)\n            response_data: dict = {\"project_id\": project_id}\n            return Response(data=response_data, status=status.HTTP_200_OK)",
+        "detail": "KrakemBackend.project.views",
         "documentation": {}
     },
     {
