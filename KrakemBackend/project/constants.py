@@ -29,5 +29,4 @@ class ResourceTypeConstants(BaseIntConstants):
     OTHER: int = 0
     TEXT: int = 1
     PDF: int = 2
-    WORD: int = 3
-
+    DOC: int = 3
