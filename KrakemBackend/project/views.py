@@ -47,12 +47,15 @@ class ProjectResources(APIView):
     def post(self, request) -> Response:
         try:
             data: Dict = request.data
+
             AddProjectResourcesSchema.validate(payload=data)
             AddProjectResourcesSchema.create(request=request)
+
             return Response(
-                status=status.HTTP_201_CREATED, 
-                data={"message": "Resources uploaded successfully"})
-        
+                status=status.HTTP_201_CREATED,
+                data={"message": "Resources uploaded successfully"},
+            )
+
         except ValueError as v:
             return Response(status=status.HTTP_400_BAD_REQUEST, data={"error": str(v)})
 
@@ -61,4 +64,5 @@ class ProjectResources(APIView):
             # In production, use: logger.error(f"Upload error: {e}")
             return Response(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                data={"error": "Internal server error"},)
+                data={"error": "Internal server error"},
+            )

@@ -21,7 +21,7 @@ class Project(models.Model):
     is_archived = models.BooleanField(default=False)
 
     created_on = models.DateTimeField(auto_now=True)
-    modified_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     deleted_on = models.DateTimeField(null=True)
 
     def __str__(self):
@@ -46,7 +46,7 @@ class Resource(models.Model):
     )
 
     is_active = models.BooleanField(default=True)
-    created_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
     modified_on = models.DateTimeField(auto_now=True)
 
     def __str__(self):
@@ -57,15 +57,15 @@ class Resource(models.Model):
 
 
 class ResourceChunks(models.Model):
-    vector_id = models.CharField(null=False, max_length=255)
+    vector_id = models.CharField(null=False, max_length=255, unique=True)
     data = models.FileField(null=False, upload_to="chunks/")
     resource = models.ForeignKey(to=Resource, null=False, on_delete=models.CASCADE)
     vectorising_state = models.IntegerField(
         choices=ProcessingConstants.model_choices, default=ProcessingConstants.PENDING
     )
 
-    created_on = models.DateField(auto_now=True)
-    completed_on = models.DateField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    completed_on = models.DateField(null=True)
 
     class Meta:
         db_table = "resource_chunk"
